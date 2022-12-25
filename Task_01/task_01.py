@@ -2,3 +2,13 @@
 # Пример:
 # - при $d = 0.001, π = 3.141.$    $10^{-1} ≤ d ≤10^{-10}$
 
+from math import pi
+
+d = float(input("Введите число для заданной точности числа Пи: "))
+count = 0
+temp=d
+while temp!=1:
+    temp *=10
+    count+=1
+
+print(f'Число Пи с заданной точностью {d} равно {round(pi, count)}')
